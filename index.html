@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qur — Quran Study Companion</title>
+  <meta name="description" content="Learn the Quran through tafsir, tadabbur, linguistic analysis, and historical context — from reliable open sources." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='88' fill='%238f7339'%3E۞%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-head">
+        <a href="#/" class="brand">
+          <span class="brand-mark">ق</span>
+          <span class="brand-text">
+            <strong>Qur</strong>
+            <small>Quran Study Companion</small>
+          </span>
+        </a>
+      </div>
+      <div class="sidebar-search">
+        <input id="surah-search" type="search" placeholder="Filter surahs — Enter searches verses" autocomplete="off" />
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#/" data-nav="home">Home</a>
+        <a href="#/reflections" data-nav="reflections">Journal</a>
+        <a href="#/bookmarks" data-nav="bookmarks">Bookmarks</a>
+        <a href="#/sources" data-nav="sources">Sources</a>
+      </nav>
+      <div id="surah-list" class="surah-list" role="list"></div>
+    </aside>
+
+    <button id="sidebar-toggle" aria-label="Toggle surah list">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div id="scrim"></div>
+
+    <!-- Main -->
+    <main id="main"></main>
+
+    <!-- Tafsir / Reflect drawer -->
+    <div id="drawer" class="drawer" hidden>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <div id="drawer-title"></div>
+          <button id="drawer-close" aria-label="Close panel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <div id="drawer-body" class="drawer-body"></div>
+      </div>
+    </div>
+  </div>
+  <audio id="player"></audio>
+  <script src="app.js?v=8"></script>
+</body>
+</html>
