@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ece4d2" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#201a10" media="(prefers-color-scheme: dark)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Qur" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
   <title>Qur — Quran Study Companion</title>
   <meta name="description" content="Learn the Quran through tafsir, tadabbur, linguistic analysis, and historical context — from reliable open sources." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='88' fill='%238f7339'%3E۞%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -36,9 +43,24 @@
       <div id="surah-list" class="surah-list" role="list"></div>
     </aside>
 
-    <button id="sidebar-toggle" aria-label="Toggle surah list">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
+    <nav id="tabbar" aria-label="Mobile navigation">
+      <button id="tab-surahs" aria-label="Open surah list">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <span>Surahs</span>
+      </button>
+      <a href="#/" data-nav="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="#/reflections" data-nav="reflections">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21c0-9 4.5-14.5 13-16-1 8.5-5.5 13.5-13 14.5"/><path d="M6 21c2-5 5-8.5 9-11"/></svg>
+        <span>Journal</span>
+      </a>
+      <a href="#/bookmarks" data-nav="bookmarks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17l-6-4.5L6 21z"/></svg>
+        <span>Bookmarks</span>
+      </a>
+    </nav>
     <div id="scrim"></div>
 
     <!-- Main -->
@@ -58,6 +80,6 @@
     </div>
   </div>
   <audio id="player"></audio>
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>
