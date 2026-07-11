@@ -8,8 +8,8 @@
  *  - Search: network-only (results are dynamic and cheap).
  *  - Audio is left to the browser (files are large; not precached).
  */
-const CACHE = "qur-v1";
-const SHELL = ["./", "index.html", "style.css", "app.js"];
+const CACHE = "qur-v2";
+const SHELL = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

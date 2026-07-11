@@ -312,7 +312,7 @@ function renderSurahList(filter = "") {
 }
 
 function setNav(route) {
-  document.querySelectorAll(".sidebar-nav a").forEach((a) => {
+  document.querySelectorAll(".sidebar-nav a, #tabbar [data-nav]").forEach((a) => {
     a.classList.toggle("active", a.dataset.nav === route);
   });
 }
@@ -400,7 +400,7 @@ function viewHome() {
         <div class="feature-card"><span class="icon">${ICONS.letters}</span><h3>Linguistic analysis</h3><p>Word-by-word Arabic with transliteration and meaning, with full morphology and a root explorer built in.</p></div>
         <div class="feature-card"><span class="icon">${ICONS.arch}</span><h3>Historical context</h3><p>When and where each surah was revealed, its themes and background, from Maududi's Tafhim al-Qur'an.</p></div>
       </div>
-      <p class="page-sub" style="text-align:center">Choose a surah from the list to begin${window.innerWidth <= 900 ? " — open it with the button below" : ""}.</p>` : ""}
+      <p class="page-sub" style="text-align:center">Choose a surah from the list to begin${window.innerWidth <= 900 ? " — tap Surahs below" : ""}.</p>` : ""}
     </div>`;
 
   $("#random-surah").addEventListener("click", () => {
@@ -1320,7 +1320,7 @@ async function init() {
       location.hash = `#/search?q=${encodeURIComponent(e.target.value.trim())}`;
     }
   });
-  $("#sidebar-toggle").addEventListener("click", () => document.body.classList.toggle("sidebar-open"));
+  $("#tab-surahs").addEventListener("click", () => document.body.classList.toggle("sidebar-open"));
   $("#scrim").addEventListener("click", () => document.body.classList.remove("sidebar-open"));
   $("#sidebar").addEventListener("click", (e) => {
     if (e.target.closest("a")) document.body.classList.remove("sidebar-open");

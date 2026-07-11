@@ -1,0 +1,15 @@
+{
+  "name": "Qur — Quran Study Companion",
+  "short_name": "Qur",
+  "description": "Learn the Quran through tafsir, tadabbur, linguistic analysis, and historical context — from reliable open sources.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ece4d2",
+  "theme_color": "#ece4d2",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

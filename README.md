@@ -11,6 +11,8 @@ The home screen is a small dashboard: a deterministic **verse of the day** (same
 
 Plus: four readable English translations (Saheeh International, M.A.S. Abdel Haleem, Taqi Usmani, Maududi), continuous per-verse recitation by Mishary Alafasy (auto-advances with follow-along scrolling), full-text verse search across translations (press Enter in the sidebar search), progressive loading of long surahs, exact-verse resume ("continue reading" returns to the verse you left), per-verse bookmarks, journal export to Markdown, reading preferences (Arabic text size, full-verse transliteration, Arabic-only / translation-only display, manual light/dark/auto theme — the "Aa" button in the reader toolbar), offline support via a service worker (visited surahs, tafsirs, and word data stay readable without a connection), Makkan/Madinan and revelation-order metadata, and a light/dark theme in a warm beige manuscript palette with subtle Islamic geometric ornament (eight-pointed star motifs, arched framing, calligraphic accents).
 
+The app is fully mobile-friendly: a bottom tab bar (Surahs · Home · Journal · Bookmarks) on small screens, touch-sized controls, iOS-safe inputs and safe-area insets — and it's an installable PWA ("Add to Home Screen" opens it standalone with the eight-point-star icon; `tools/build_icon.py` regenerates the icons).
+
 ## Running it
 
 No build step, no dependencies. From this folder:
